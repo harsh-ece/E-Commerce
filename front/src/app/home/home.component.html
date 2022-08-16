@@ -1,0 +1,61 @@
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of product">
+            <div class="card col-md-3">
+                
+                   
+                
+                
+                <img [src]="item.image" width="500px" height="500px">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.productName}}</h5>
+                
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.productDescription}}</p>
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.discountedPrice}}</h5>
+                
+                <p><strong>Price:{{item.total}}</strong> </p>
+                
+                
+                <button class="btn btn-primary" (click)="AddToCart(item)">Add to cart</button>
+            </div>
+        </ng-container>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!--<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>produtName</th>
+            <th>lastName</th>
+            <th>position</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let productt of product">
+        <td>{{productt.productName}}</td>
+        <td>{{productt.productDescription}}</td>
+        <td>{{productt.discountedPrice}}</td>
+        <td>{{productt.originalPrice}}</td>
+        <td><button (click)="Add(productt.id)" class="btn btn-success" >Add To Cart</button></td>
+        </tr>
+    </tbody>
+</table>-->
+
+
+
+
+
+
